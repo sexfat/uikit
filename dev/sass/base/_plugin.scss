@@ -1,0 +1,10 @@
+//=======================================================
+//box-shadow  hover
+// @include hover_shadow(1px,1px, 10px , #333);
+//======================================================
+@mixin hover_shadow($value_x, $value_y, $value_blur, $color) {
+    transition: all .3s ease;
+    &:hover {
+        @include box-shadow($value_x, $value_y, $value_blur, $color);
+    }
+}

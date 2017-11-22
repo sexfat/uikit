@@ -1,0 +1,13 @@
+    //===========樂透 注單群組名===========//
+#lotteryCart {
+    button.lotteryNumbericon {
+        @include lotteryNumbericon-S;
+        .amount {
+            color: $danger !important;
+        }
+    }
+}
+    #lotteryCart table:nth-child(2) {
+        float: right;
+        width: 400px;
+    }

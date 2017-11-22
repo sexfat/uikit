@@ -1,0 +1,125 @@
+.logo {
+    @include float-blocks(left, 72px, 72px);
+}
+
+.lottery-name {
+    margin-top: 27px;
+    @include float-blocks(left, 130px, 72px);
+}
+
+.og-logo_big {
+    margin-top: 10px;
+    @include float-blocks(left, 68px);
+}
+
+.og-logo {
+    margin-top: 20px;
+    @include float-blocks(left, 50px , 30px);
+}
+
+.og {
+    margin-top: 18px;
+    margin-left: 80px;
+    @include float-blocks(left, 120px, 30px);
+    color: white;
+    font-size: 16px;
+}
+
+.navbar .navbar-header {
+    @include linearGradient(#fe7608, #f80b45);
+}
+
+.right {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -82px;
+}
+
+.footer-01 {
+    width: 100%;
+    max-width: 788px;
+    margin: 50px auto 50px auto;
+}
+
+.left {
+    width: 100%;
+    text-align: center;
+}
+
+.openview {
+    float: right;
+    height: auto;
+    position: absolute;
+    top: 19px;
+    right: 30px;
+    p {
+        color: #f80b45;
+    }
+}
+
+.app-sidebar-closed {
+    .og {
+        display: none;
+    }
+    .logo {
+        @include float-blocks(left, 50px, 50px);
+        transition: all 1s ease-out;
+    }
+    .lottery-name {
+        display: none;
+    }
+}
+
+.lottery-name {
+    color: #fff;
+}
+
+.selects {
+   font-size: .8rem;
+}
+
+.selects_big {
+   
+}
+
+// .navbar-menu {
+//   float: right;
+// }
+// .navbar-menu > li {
+//   display: inline-block;
+// }
+// .navbar-menu > li > a {
+//   display: block;
+//   padding: 10px 5px;
+//   line-height: 24px;
+//   color: #777;
+//   text-decoration: none;
+//   transition: color .3s;
+// }
+// # menu-toggler{
+// float: right;
+//   display: none;
+//   padding: 5px 10px;
+//   margin: 5px 0;
+//   line-height: 24px;
+//   color: #777;
+//   text-decoration: none;
+//   transition: color .3s;
+//   border: 1px solid #ccc;
+// }
+// @media screen and (max-width: 600px) {
+//   .navbar-menu {
+//     float: none;
+//     display: none;
+//   }
+//   .navbar-menu.active {
+//     display: block;
+//   }
+//   .navbar-menu > li {
+//     display: block;
+//   }
+//   .button-toggle {
+//     display: inline-block;
+//   }
+// }

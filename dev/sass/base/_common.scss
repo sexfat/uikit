@@ -1,0 +1,29 @@
+.clearfix {
+    clear: both;
+}
+
+.container {
+    width: 1200px;
+    @include margin-auto();
+}
+
+.bold {
+    font-weight: bold;
+}
+
+$color-red: #d43f3a;
+.red {
+    color: $color-red;
+}
+
+.white {
+    color: #fff;
+}
+
+.float_right {
+    float: right;
+}
+
+.float_left {
+    float: left;
+}

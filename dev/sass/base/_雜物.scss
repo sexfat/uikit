@@ -1,0 +1,18 @@
+$small :  720px; //手機
+$medium : 721px;  //平板
+$medium_max : 1119px; //平板
+$large :1200px;  //桌機
+
+.container {
+    width: 1200px;
+    @include margin-auto();
+}
+
+.vertical_text_en {
+    // writing-mode: vertical-rl;
+    transform: rotate(-90deg) ;
+    transform-origin: 0% 0%; //旋轉對應點
+}
+.vertical_text_cn {
+    writing-mode: vertical-rl; //由右到左
+}

@@ -1,0 +1,15 @@
+//- 使用方式 +makeList(['網站首頁' ,'真人視訊' ,'bird' , 'okgo'])
+//-
+
+
+
+mixin makeList(vars)
+ ul 
+   - for ( i = 0 ; i < vars.length; i++ ){ 
+     li.item
+      |
+      | 
+      a(href="/LinkName")= vars[i]
+   - }
+
+

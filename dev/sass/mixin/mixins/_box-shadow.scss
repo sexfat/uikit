@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------
+
+  // Box Shadow
+
+// ----------------------------------------------------------------------
+
+ // example: @include box-shadow(1px, 2px, 2px, 2px, #000);
+
+// @mixin box-shadow($hoff: false, $voff: false, $blur: false, $spread: false, $color: false){
+//   box-shadow: $hoff $voff $blur $spread $color;
+//   -moz-box-shadow: $hoff $voff $blur $spread $color;
+//   -webkit-box-shadow: $hoff $voff $blur $spread $color;
+// }
+
+
+@mixin box-shadow($h_shadow ,$v_shadow,$blur,$color){
+  box-shadow: $h_shadow  $v_shadow $blur $color;
+  -moz-box-shadow: $h_shadow  $v_shadow $blur $color;
+  -webkit-box-shadow: $h_shadow  $v_shadow $blur $color;
+}

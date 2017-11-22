@@ -1,0 +1,12 @@
+//=====================================
+//  include hr-line (1px , 1px, #000);
+//=====================================
+
+@mixin hr-line ($height, $border-weight, $color) {
+    display: block;
+    height: $height;
+    border: 0;
+    border-top: $border-weight solid $color;
+    margin: 0;
+    padding: 0;
+}

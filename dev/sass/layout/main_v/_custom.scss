@@ -1,0 +1,165 @@
+$base_color: #f2a848;
+body {
+    background-color: #260100 !important;
+    color: #fff;
+}
+
+%box_center {
+    width: 60vw;
+    @include margin-auto;
+}
+
+@mixin color_clock ($color_name, $color) {
+    .#{$color_name} {
+        .flip {
+            box-shadow: 0 1px 12px rgba($color, 0.7);
+        }
+        ul li a div div.inn {
+            background-color: $color !important;
+            // background-color: #c28824 !important;
+        }
+        .flip-clock-dot {
+            background: $color;
+        }
+    }
+}
+
+
+.wrp_01 {
+    .containers {
+        background-color: rgba($color: #000000, $alpha: 0.1);
+        .header {
+            @extend %box_center;
+            height: 168px;
+            position: relative;
+            .logo {
+                // background: url('../images/logo.png');
+                position: absolute;
+                top: 26px;
+            }
+            .sub_information {
+                position: absolute;
+                right: 0;
+                top: 50px;
+                padding: 10px 20px;
+                border-radius: 15px;
+                background-color: #320802;
+                .box {
+                    // @include float-blocks(left, 200px, 30px);
+                    display: inline-block;
+                    color: #d1a742;
+                }
+                .account {}
+                .money {}
+                .record {}
+                .line {
+                    margin: 0 5px;
+                    color: #d1a742;
+                }
+            }
+            .laugeage {
+                position: absolute;
+                right: 0;
+                top: 120px;
+                word-spacing: -4px;
+                .zh {
+                    background-color: #d1a742;
+                    padding: 3px 12px;
+                    border-radius: 10px 0px 0px 10px;
+                    cursor: pointer;
+                }
+                .en {
+                    background-color: #331808;
+                    padding: 3px 12px;
+                    border-radius: 0px 10px 10px 0px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .nav {
+        @include linearGradient(#7b0200, #b30200);
+        height: 50px;
+        padding-top: 10px;
+        position: relative;
+        ul {
+            @extend %box_center;
+            .list {
+                @include float-blocks(left, 33%, 100px);
+                color: $base_color;
+                font-weight: bold;
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+    }
+    .wrapper {
+        @extend %box_center;
+        .boxer {
+            position: relative;
+            margin-top: 40px;
+            width: 90%;
+            @include margin-auto();
+            min-height: 280px;
+            border: 3px solid #f2a848;
+            border-radius: 10px;
+            background-color: #260e04;
+            .game_logo {
+                width: 20%;
+                .box {
+                    position: relative;
+                    top: 20px;
+                    left: 20px;
+                    img {
+                        width: 95%;
+                    }
+                }
+            }
+            .game_content {
+                width: 50%;
+                .title {
+                    margin: 1em;
+                    h2 {
+                        font-size: 1.35vw;
+                        color: #c28824;
+                        margin-bottom: 3px;
+                    }
+                    .date {
+                        color: #9d480a;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                }
+                .open {
+                    color: #919191;
+                    margin-left: 10px;
+                    margin-top: -10px;
+                }
+                @include color_clock(yellow , #c28824);
+                @include color_clock(brown , #cc3a00);
+            }
+            .game_btn {
+                width: 30%;
+                @include circlr_btn(circle_btn, #b80000) {
+                    margin-top: 15px;
+                }
+                ;
+                @include circlr_btn(circle_btn_2, #660000) {
+                    margin-top: 30px;
+                }
+                ;
+                .font {
+                    font-size: 25px;
+                    font-weight: bold;
+                    line-height: 1;
+                    position: relative;
+                    top: 18px;
+                    color: #f2a848;
+                    width: 71px;
+                    left: 10px;
+                }
+            }
+        }
+    }
+    .footer {}
+}

@@ -1,0 +1,47 @@
+// margin 距離function
+//==============================
+// 範例  @include margin(right,100 ,$display:inline-block);
+//      @include margin(right,100 ,$display:inherit);
+//      @include margin(right,100);
+//==============================
+//
+@mixin margin($direction,$disl,$display:null) {
+     @for $i from 1 through $disl{
+        .margin#{$direction}-#{$i} {
+            margin-#{$direction}: 1px*$i;
+            display: $display;
+        }
+        #margin#{$direction}-#{$i} {
+            margin-#{$direction}: 1px*$i;
+            display: $display;
+        }
+    }
+}
+
+
+
+@mixin push($direction_pencent,$disl_pencent,$display_pencent:null) {
+     @for $i from 1 through $disl_pencent{
+        .push#{$direction_pencent}-#{$i} {
+            margin-#{$direction_pencent}: 1%*$i;
+            display: $display_pencent;
+        }
+        #push#{$direction_pencent}-#{$i} {
+            margin-#{$direction_pencent}: 1%*$i;
+            display: $display_pencent;
+        }
+    }
+}
+
+@mixin padding($direction_px,$disl_px,$display_px:null) {
+     @for $i from 1 through $disl_px{
+        .padding#{$direction_px}-#{$i} {
+            padding-#{$direction_px}: 1px*$i;
+            display: $display_px;
+        }
+        #padding#{$direction_px}-#{$i} {
+            padding-#{$direction_px}: 1px*$i;
+            display: $display_px;
+        }
+    }
+}

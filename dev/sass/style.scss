@@ -1,0 +1,21 @@
+// reset setting
+@import "base/reset";
+// plugin setting
+// @import "vender/bootstrap-sass/bootstrap";
+
+// vender setting
+
+@import "reference/styles";
+@import "reference/plugins";
+
+//
+@import "base/setting";
+@import "base/font_family";
+@import "base/font";
+@import "mixin/mixins";
+@import "base/common";
+
+
+@include margin(top,100);
+@include margin(left,200);
+@include margin(right,100);

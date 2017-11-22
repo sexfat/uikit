@@ -1,0 +1,7 @@
+.og {
+    margin-top: 18px;
+    margin-left: 70px;
+    @include float-blocks(left, 120px, 30px);
+    color: white;
+    font-size: 16px;
+}

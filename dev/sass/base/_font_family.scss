@@ -1,0 +1,58 @@
+// == 圓體
+// $cwTeXYen : 'cwTeXYen' , sans-serif;
+// @import url(//fonts.googleapis.com/earlyaccess/cwtexyen.css);
+// == 仿宋體  
+// $cwTeXFangSong  : 'cwTeXFangSong', serif;
+// @import url(//fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+// == 
+// $Noto_Sans_TC : 'Noto Sans TC', sans-serif;
+// @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+// == 明體
+// $cwTeXMing : 'cwTeXMing', serif;
+// @import url(//fonts.googleapis.com/earlyaccess/cwtexming.css);
+// == 黑體
+// $cwTeXHei  : 'cwTeXHei', sans-serif;
+// @import url(//fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
+
+@mixin FontFamily($fontfamilys) {
+    @if $fontfamilys=='cwTeXHei' {
+        @import url(//fonts.googleapis.com/earlyaccess/cwtexhei.css);
+        body {font-family:'cwTeXHei','Lato',  sans-serif;}
+    }
+    @else if $fontfamilys =='cwTeXMing'{
+        @import url(//fonts.googleapis.com/earlyaccess/cwtexming.css);
+        body {font-family:'cwTeXMing', sans-serif; }
+    }
+    @else if $fontfamilys =='Noto_Sans_TC'{
+        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+        body {font-family:'Noto Sans TC', sans-serif; }
+    }
+    @else if $fontfamilys =='cwTeXFangSong'{
+        @import url(//fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+        body {font-family:'cwTeXFangSong', sans-serif;}
+    }
+    @else if $fontfamilys =='cwTeXYen'{
+        @import url(//fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+        body {font-family:'cwTeXYen' , sans-serif;}
+    }
+    //簡體
+    @else if $fontfamilys =='notosansscsliced'{
+        @import url(//fonts.googleapis.com/earlyaccess/notosansscsliced.css);
+        body {font-family: 'Noto Sans SC Sliced', sans-serif;}
+    }
+    @else if $fontfamilys =='notosanssc'{
+        @import url(//fonts.googleapis.com/earlyaccess/notosanssc.css);
+        body {font-family: 'Noto Sans SC', sans-serif;}
+    }
+    @else if $fontfamilys =='notosanssc'{
+        @import url(//fonts.googleapis.com/earlyaccess/notosanssc.css);
+        body {font-family: 'Noto Sans SC', sans-serif;}
+    }
+    @else if $fontfamilys =='muli'{
+        @import url(//https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+        body {font-family: 'Open Sans', sans-serif;}
+    }
+    
+    
+}

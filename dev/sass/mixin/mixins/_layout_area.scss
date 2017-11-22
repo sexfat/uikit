@@ -1,0 +1,21 @@
+//======================================
+//
+// @include layouts (ul_classname, li_classname, left, width, height) {
+//     //   text-align: center;
+//     //ul 屬性
+//  }
+// 沿襲section_area
+//======================================
+@mixin layouts-menu ($ul_names:null, $li_names:null, $float:null, $width:null, $height: null) {
+    #{$ul_names} {
+        @content
+        #{$li_names} {
+            float: $float;
+            position: relative;
+            min-height: 1px;
+            height: $height;
+            width: $width;
+            @include clearfix();
+        }
+    }
+}

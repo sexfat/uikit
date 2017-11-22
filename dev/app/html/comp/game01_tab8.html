@@ -1,0 +1,74 @@
+<!-- myTab1_example8 [定位胆] -->
+<div class="panel-wrapper">
+    <!--start 遊戲方式-->
+    <div class="panel-body panel-white no-border border-bottom">
+        <div class="lotteryGametype">
+            <div class="row space10">
+                <div class="col-lg-1 col-md-1 col-sm-12 margin-top-5">
+                    <label for="">定位</label>
+                </div>
+                <div class="col-lg-11 col-md-11 col-sm-12">
+                    <button type="button" class="btn btn-o btn-wide btn-success">
+                        五星定位
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end 遊戲方式-->
+    <!--start 樂透球選號區-->
+    <div class="panel-body panel-white no-border border-bottom">
+        <!--start 樂透球選號區 萬位-->
+        <div class="lotteryNumberSelect row space10">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 margin-top-5">
+                <label for="">万位</label>
+            </div>
+            @@include('lotteryNumberSelect0-9.html') 
+        </div>
+        <!--end 樂透球選號區 萬位-->
+        <!--start 樂透球選號區 千位-->
+        <div class="lotteryNumberSelect row space10">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 margin-top-5">
+                <label for="">千位</label>
+            </div>
+            @@include('lotteryNumberSelect0-9.html') 
+        </div>
+        <!--end 樂透球選號區 千位-->
+        <!--start 樂透球選號區 百位-->
+        <div class="lotteryNumberSelect row space10">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 margin-top-5">
+                <label for="">百位</label>
+            </div>
+            @@include('lotteryNumberSelect0-9.html') 
+        </div>
+        <!--end 樂透球選號區 百位-->
+        <!--start 樂透球選號區 十位-->
+        <div class="lotteryNumberSelect row space10">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 margin-top-5">
+                <label for="">十位</label>
+            </div>
+            @@include('lotteryNumberSelect0-9.html') 
+        </div>
+        <!--end 樂透球選號區 十位-->
+        <!--start 樂透球選號區 个位-->
+        <div class="lotteryNumberSelect row space10">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 margin-top-5">
+                <label for="">个位</label>
+            </div>
+            @@include('lotteryNumberSelect0-9.html') 
+        </div>
+        <!--end 樂透球選號區 个位-->
+    </div>
+    <!--end 樂透球選號區-->
+    <div class="panel-footer border-light  text-center">
+        <button type="button" class="btn btn-wide btn-primary box-circle-15 ">
+            <i class="fa fa-plus-circle padding-right-5 "></i>添加号码
+        </button>
+        <button type="button" class="btn btn-wide btn-primary box-circle-15 ">
+            <i class="fa fa-hand-o-up padding-right-5"></i>一键投注
+        </button>
+        <button type="button" class="btn btn-wide btn-primary box-circle-15 ">
+            <i class="fa fa-retweet padding-right-5"></i>机选10注
+        </button>
+    </div>
+</div>

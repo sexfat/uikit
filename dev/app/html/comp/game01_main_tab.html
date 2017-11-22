@@ -1,0 +1,112 @@
+<!-- start : tabBox row-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- start : lotteryGameset-->
+        <div id="lotteryGameset" class="panel panel-white">
+          <div class="panel-body">
+            <!-- start : tabBox-->
+            <div class="tabbable">
+                <ul id="myTab1" class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#myTab1_example1" data-toggle="tab"> 五星 </a>
+                    </li>
+                    <li>
+                        <a href="#myTab1_example2" data-toggle="tab"> 四星 </a>
+                    </li>
+                    <li>
+                        <a href="#myTab1_example3" data-toggle="tab"> 前三 </a>
+                    </li>
+                    <li>
+                        <a href="#myTab1_example4" data-toggle="tab"> 中山 </a>
+                    </li>
+                    <li>
+                        <a href="#myTab1_example5" data-toggle="tab"> 后三 </a>
+                    </li>
+                    <li>
+                        <a href="#myTab1_example6" data-toggle="tab"> 前二 </a>
+                    </li>
+                    <li>
+                        <a href="#myTab1_example7" data-toggle="tab"> 后二 </a>
+                    </li>
+                    <li>
+                        <a href="#myTab1_example8" data-toggle="tab"> 定位胆 </a>
+                    </li>
+                    <li>
+                        <a href="#myTab1_example9" data-toggle="tab"> 不定胆 </a>
+                    </li>
+                    <li>
+                        <a href="#myTab1_example10" data-toggle="tab"> 任选 </a>
+                    </li>
+                    <li>
+                        <a href="#myTab1_example11" data-toggle="tab"> 趣味玩法 </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="myTab1_example1">
+                        @@include('game01_tab1.html') 
+                        
+                    </div>
+                    <div class="tab-pane fade" id="myTab1_example2">
+                        @@include('game01_tab2.html') 
+                    </div>
+                    <div class="tab-pane fade" id="myTab1_example3">
+                        @@include('game01_tab3.html') 
+                    </div>
+                    <div class="tab-pane fade" id="myTab1_example4">
+                        @@include('game01_tab4.html') 
+                    </div>
+                    <div class="tab-pane fade" id="myTab1_example5">
+                        @@include('game01_tab5.html') 
+                    </div>
+                    <div class="tab-pane fade" id="myTab1_example6">
+                        @@include('game01_tab6.html') 
+                    </div>
+                    <div class="tab-pane fade" id="myTab1_example7">
+                        @@include('game01_tab7.html') 
+                    </div>
+                    <div class="tab-pane fade" id="myTab1_example8">
+                        @@include('game01_tab8.html') 
+                    </div>
+                    <div class="tab-pane fade" id="myTab1_example9">
+                        @@include('game01_tab9.html') 
+                    </div>
+                    <div class="tab-pane fade" id="myTab1_example10">
+                        @@include('game01_tab10.html') 
+                    </div>
+                    <div class="tab-pane fade" id="myTab1_example11">
+                        @@include('game01_tab11.html') 
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- end : tabBox -->
+        </div>
+        <!-- end : lotteryGameset -->
+    </div>
+</div>
+<!-- end : tabBox row -->
+<!-- start : money+cart -->
+<div class="row">
+    @@include('../comp/main_money.html') 
+    @@include('../comp/main_cart.html')
+</div>
+<!-- end : money+cart -->
+<!-- start : buttom -->
+<div class="row">
+<div class="col-md-12">
+    <div class="panel text-center">
+        <div class="panel-body">
+            <button type="button" class="btn btn-wide btn-primary box-circle-15 btn-lg margin-top-5">
+                <i class="fa fa fa-eraser padding-right-5 "></i>清空
+            </button>
+            <button type="button" class="btn btn-wide btn-primary box-circle-15 btn-lg margin-top-5">
+                <i class="fa fa-plus-circle padding-right-5"></i>追号
+            </button>
+            <button type="button" class="btn btn-wide btn btn-wide btn-danger box-circle-15 btn-lg margin-top-5">
+                <i class="fa fa-check padding-right-5"></i>确认投注
+            </button>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- end : buttom -->

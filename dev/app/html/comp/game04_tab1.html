@@ -1,0 +1,56 @@
+<!-- myTab1_example5 [后三] -->
+<div class="panel-wrapper">
+    <!--start 遊戲方式-->
+    <div class="panel-body panel-white no-border border-bottom">
+        <div class="lotteryGametype">
+            <div class="row space10">
+                <div class="col-lg-1 col-md-1 col-sm-12 margin-top-5">
+                    <label for="">其他</label>
+                </div>
+                <div class="col-lg-11 col-md-11 col-sm-12">
+                    <button type="button" class="icon2 btn btn-o btn-wide btn-purple">
+                        特码直选
+                    </button>
+                    <button type="button" class="btn btn-o btn-wide btn-purple">
+                        特码生肖
+                    </button>
+                    <button type="button" class="btn btn-o btn-wide btn-purple">
+                        特码尾数
+                    </button>
+                    <button type="button" class="btn btn-o btn-wide btn-purple">
+                        特码色波
+                    </button>
+                    <button type="button" class="btn btn-o btn-wide btn-purple">
+                        特码大小单双
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end 遊戲方式-->
+    <!--start 樂透球選號區-->
+    <div class="panel-body panel-white no-border border-bottom">
+        <!--start 樂透球選號區 0-49-->
+        <div class="col-lg-12">
+        <ul class="lotteryNumberGroup_1">
+            <!--香港特碼選號0-49號 的樂透球 群組 （pug編譯）-->
+            @@include('lotteryNumberSelect0_49.html')
+        </ul>
+            
+            
+        </div>
+        <!--end 樂透球選號區 0-49-->
+    </div>
+    <!--end 樂透球選號區-->
+    <div class="panel-footer border-light  text-center">
+        <button type="button" class="btn btn-wide btn-primary box-circle-15 ">
+            <i class="fa fa-plus-circle padding-right-5 "></i>添加号码
+        </button>
+        <button type="button" class="btn btn-wide btn-primary box-circle-15 ">
+            <i class="fa fa-hand-o-up padding-right-5"></i>一键投注
+        </button>
+        <button type="button" class="btn btn-wide btn-primary box-circle-15 ">
+            <i class="fa fa-retweet padding-right-5"></i>机选10注
+        </button>
+    </div>
+</div>

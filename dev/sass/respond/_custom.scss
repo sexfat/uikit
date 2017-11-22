@@ -1,0 +1,24 @@
+//跑馬燈
+.breadcrumb-wrapper {
+    .abgne_marquee {
+        overflow: hidden;
+        position: relative;
+        width: 60%;
+        height: 25px;
+        color: $color-red;
+        top:6px;
+        ul {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            .list {
+                display: block;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                height: 25px;
+                line-height: 25px;
+            }
+        }
+    }
+}

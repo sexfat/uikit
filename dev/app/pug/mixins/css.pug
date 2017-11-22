@@ -1,0 +1,5 @@
+mixin css(file, media)
+    - media = media || 'all'
+    - for ( i = 0 ; i < file.length; i++ ) {
+    link(type="text/css", rel="stylesheet", media=media, href=file[i])
+    - }

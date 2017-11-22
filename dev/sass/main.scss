@@ -1,0 +1,63 @@
+// reset setting
+@import "base/reset";
+// plugin setting
+// @import "vender/bootstrap-sass/bootstrap";
+
+// vender setting
+
+@import "reference/styles";
+@import "reference/plugins";
+@import "reference/themes/lyt2-theme-1";
+//
+@import "base/setting";
+@import "base/font_family";
+@import "base/font";
+@import "mixin/mixins";
+@import "base/common";
+
+
+
+
+
+
+// libary setting
+// @import "libs/animate-sass/animate";
+// @ims
+// @import "libs/hover/scss/hover";
+// @import "libs/owl.carousel/src/scss/owl.carousel";
+// @import "libs/owl.carousel/src/scss/owl.theme.default";
+@import "base/plugin";
+
+//設定
+
+
+//pages
+@import "respond/custom";
+
+//桌機
+@include grid-media($custom-grid) {
+    @import "respond/desktop"; 
+}
+//平板
+@include grid-media($medium-custom-grid) {
+    @import "respond/medium";
+
+}
+//手機
+@include grid-media($small-custom-grid) {
+    @import 'respond/small';    
+}
+
+
+@include margin(top,100);
+@include margin(left,200);
+@include margin(right,100);
+.box {
+    width: 20px;
+}
+
+
+
+
+
+

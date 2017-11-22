@@ -1,0 +1,35 @@
+//header style basic  setting
+
+// banner basic setting
+$basic   :  'Open Sans', sans-serif ;
+$lato    :  'Lato', sans-serif;
+$shansan :  'source-han-sans-traditional', sans-serif;
+
+
+//font 通用設定
+$fontfamilys    : $basic;
+$font_vender    : muli; //family : cwTeXHei / cwTeXMing /Noto_Sans_TC / cwTeXFangSong / cwTeXYen / notosansscsliced /notosanssc /muli
+$font_base_size : 14px ;
+$font_weight    : 300 ; 
+$line_height    : 1.5 ;
+$base_color     : #585858 ;
+$letter-spacing : 0.01rem;
+$word-spacing   : 2px; 
+
+//layout
+//是否使用套件
+
+//rwd 
+@import "../../libs/neat/core/neat";
+
+$custom-grid: ( columns: 12, gutter: 20px, media: 1200px, direction: ltr, );
+$medium-custom-grid: ( columns: 12, gutter: 20px, media:'only screen and (min-width: 768px) and (max-width: 1200px)', direction: ltr, );
+$small-custom-grid: ( columns: 12, gutter: 20px, media: 'only screen  and (max-width: 767px)', direction: ltr, );
+
+
+
+
+
+
+
+

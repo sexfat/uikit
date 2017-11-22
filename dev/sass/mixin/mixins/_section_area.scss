@@ -1,0 +1,12 @@
+//======================================
+//.wrapper {@include float-blocks(right,100px,100px); }
+//======================================
+
+@mixin float-blocks ($float:null, $width:null, $height: null) {
+  float: $float;
+  position: relative;
+  min-height: 1px;
+  height: $height;
+  width:$width;
+  @include clearfix();
+}

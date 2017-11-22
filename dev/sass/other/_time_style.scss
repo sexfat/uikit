@@ -1,0 +1,64 @@
+//修改 時鐘的樣式
+//clock style
+.flip-clock-divider {
+    .flip-clock-label {
+        display: none
+    }
+    .minutes {
+        .flip-clock-label {
+            display: none
+        }
+    }
+    .seconds {
+        .flip-clock-label {
+            display: none
+        }
+    }
+}
+
+//時鐘陰影
+.flip-clock-wrapper .flip {
+    box-shadow: 0 1px 12px rgba(13, 80, 223, 0.7);
+}
+
+//時鐘顏色
+.flip-clock-wrapper ul li a div div.inn {
+    background-color: #2c62de;
+}
+$circle : 8px;
+
+.flip-clock-dot {
+    background: #2c62de;
+    width: $circle;
+    height: $circle;
+    border-radius: $circle;
+    &.top {
+        top:25px;
+
+    }
+    &.bottom {
+        bottom: 40px;
+    }
+
+}
+
+//時鐘大小
+.flip-clock-wrapper ul {
+    width:60px ;
+    height:70px ; 
+    li a div {
+        &.up:after {
+            //中间横线
+           top:34px;
+        }
+       div {
+
+        &.inn {
+            //字體大小
+           font-size: 56px;
+           line-height: 1.2em;
+        }
+     }
+    }
+}
+

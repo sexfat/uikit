@@ -1,0 +1,11 @@
+// @include circle(50 , 10 , #fff);
+
+
+@mixin circle ($dis, $padding ,$color) {
+    width: $dis + px;
+    height: $dis + px;
+    border-radius: $dis + px;
+    border: 1px solid $color;
+    padding: $padding + px;
+    cursor: pointer;
+};

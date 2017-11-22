@@ -1,0 +1,130 @@
+/* ---------------------------------------------------------------------- */
+/*  Accordion
+/* ---------------------------------------------------------------------- */
+.accordion {
+    .panel {
+        border: none;
+        @include border-radius(0);
+        @include box-shadow(0,0,0,rgba(0,0,0,0));
+    }
+
+    .panel-heading {
+        padding: 0;
+        background-image: none;
+        height: auto;
+        min-height: 0;
+        @include box-shadow(0,0,0,rgba(0,0,0,0));
+        @include border-radius(0);
+
+        .accordion-toggle {
+            background-color: #E6E8E8;
+            color: $text-dark;
+            display: block;
+            font-size: $font-size-base;
+            line-height: 20px;
+            padding: 10px;
+            position: relative;
+
+            &:hover, &:focus {
+                text-decoration: none;
+            }
+
+            &.collapsed {
+                background-color: #F3F3F3;
+                border-color: #D9D9D9;
+                border-width: 0 0 0 1px;
+                font-weight: 300;
+
+                > .icon-arrow {
+                    &:before {
+                        content: "\e61a" !important;
+                    }
+                }
+            }
+
+            > .icon-arrow {
+                font-size: 12px;
+                padding: 0 5px;
+                display: inline-block;
+                font-family: 'themify';
+                font-style: normal;
+                font-weight: normal;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                color: #2196F3;
+
+                &:before {
+                    content: "\e622";
+                }
+            }
+        }
+    }
+
+    .panel-body {
+        border: none !important;
+    }
+
+    &.panel-group .panel + .panel {
+        margin-top: 1px;
+    }
+
+    &.accordion-white {
+        .panel-heading {
+            margin-bottom: 20px;
+
+            .accordion-toggle {
+                background-color: $white;
+                padding: 5px 0 !important;
+                border-bottom: 2px solid #2196F3;
+
+                &.collapsed {
+                    border-bottom: 2px solid #D8D8D8;
+                }
+            }
+        }
+
+        &.panel-group .panel + .panel {
+            margin-top: 0;
+        }
+
+        .panel-collapse {
+            .panel-body {
+                overflow: hidden;
+            }
+        }
+    }
+
+    &.heading-white {
+        .accordion-toggle {
+            background-color: $white;
+            color: $text-color;
+        }
+
+        .panel-group .panel + .panel {
+            margin-top: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.07);
+        }
+    }
+
+    &.no-padding {
+        .panel-body {
+            padding: 0;
+        }
+    }
+
+    &.body-light-grey {
+        .panel-body {
+            background: $lightGrey !important;
+        }
+    }
+
+    .panel-group {
+        margin-bottom: 0;
+    }
+
+    .panel-group .panel + .panel {
+        margin-top: 0;
+        border-top: 1px solid transparent;
+    }
+}

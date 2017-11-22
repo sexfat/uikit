@@ -1,0 +1,43 @@
+//===========樂透 金額設定===========//
+@mixin effect($alph:1, $border:5px) {
+    border-top: $border solid rgba(249, 1, 36, $alph);
+}
+#moneySelect {
+    li {
+        margin: 5px 0.5%;
+        width: 15%;
+        padding-top: 15px;
+    }
+
+    @for $i from 1 through 6 {
+        li:nth-child(#{$i}) {
+            @include effect(1 - $i*0.12);
+
+            &::after {
+                content: "";
+                width: 0px;
+                height: 0px;
+                border-width: 8px;
+                border-style: solid;
+                @include effect(1 - $i*0.15,10px);
+                border-right-color: transparent;
+                border-left-color: transparent;
+                border-bottom-color: transparent;
+                //border-color: $red transparent transparent transparent;
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                margin-left: -8px;
+                display: none;
+            }
+        }
+    }
+    li:hover::after,
+    li:active::after,
+    li.active::after {
+        display: block;
+    }
+}
+
+
+

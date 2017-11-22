@@ -1,0 +1,152 @@
+/* ---------------------------------------------------------------------- */
+/* Bootsrap Slider
+/* ---------------------------------------------------------------------- */
+.slider {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.slider-horizontal {
+    margin: 10px 0;
+    width: 100% !important;
+}
+
+.slider-horizontal .slider-track {
+    height: 5px !important;
+    left: 0;
+    margin-top: -5px;
+    top: 50%;
+    width: 100%;
+    background-image: none;
+    box-shadow: none;
+    background-color: silver;
+    border-radius: 0;
+}
+
+.slider-horizontal .slider-handle {
+    margin-top: -10px !important;
+}
+
+
+
+.slider-handle.round {
+    background: rgba(221,221,221,1) !important;
+    background: -moz-linear-gradient(top, rgba(221,221,221,1) 0%, rgba(226,226,226,1) 13%, rgba(255,255,255,1) 97%) !important;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(221,221,221,1)), color-stop(13%, rgba(226,226,226,1)), color-stop(97%, rgba(255,255,255,1))) !important;
+    background: -webkit-linear-gradient(top, rgba(221,221,221,1) 0%, rgba(226,226,226,1) 13%, rgba(255,255,255,1) 97%) !important;
+    background: -o-linear-gradient(top, rgba(221,221,221,1) 0%, rgba(226,226,226,1) 13%, rgba(255,255,255,1) 97%) !important;
+    background: -ms-linear-gradient(top, rgba(221,221,221,1) 0%, rgba(226,226,226,1) 13%, rgba(255,255,255,1) 97%) !important;
+    background: linear-gradient(to bottom, rgba(221,221,221,1) 0%, rgba(226,226,226,1) 13%, rgba(255,255,255,1) 97%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#ffffff', GradientType=0 ) !important;
+    box-shadow: 0 2px 1px -1px #ffffff inset, 0 1px 3px rgba(0, 0, 0, 0.39) !important;
+    height: 26px;
+    opacity: 1;
+    width: 26px;
+}
+
+.slider-selection {
+    background-image: none !important;
+    border-radius: none;
+    box-shadow: none;
+}
+
+.slider-primary .slider-selection {
+    background: $primary;
+}
+
+.slider-blue .slider-selection {
+    background: $blue;
+}
+
+.slider-green .slider-selection {
+    background: $green;
+}
+
+.slider-orange .slider-selection {
+    background: $orange;
+}
+
+.slider-red .slider-selection {
+    background: $red;
+}
+
+.slider-yellow .slider-selection {
+    background: $yellow;
+}
+
+.slider-purple .slider-selection {
+    background: $purple;
+}
+
+.slider-azure .slider-selection {
+    background: $azure;
+}
+
+.slider-wrapper {
+    position: relative;
+    padding-top: 15px;
+
+    .slider-label {
+        top: 0;
+        left: 0;
+        padding: 0 2px;
+        opacity: .4;
+        color: #000;
+        font-size: 10px !important;
+        position: absolute;
+
+        &.slider-label-to {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    .slider .tooltip-inner {
+        font-size: 10px;
+        font-family: Arial,sans-serif;
+    }
+}
+
+.vertical-slider {
+    padding-top: 0;
+
+    .slider-label {
+        left: 25px;
+
+        &.slider-label-to {
+            top: auto;
+            bottom: 0;
+            right: auto;
+            left: 25px;
+        }
+    }
+}
+
+.slider-vertical .slider-handle {
+    margin-left: -10px !important;
+}
+
+.slider-vertical .slider-track {
+    width: 5px !important;
+}
+
+.slider-vertical .slider-handle {
+    margin-left: -10px !important;
+}
+
+.slider-vertical {
+    margin: 0 50px 0 10px;
+}
+
+.slider-vertical .slider-handle {
+    margin-left: -10px !important;
+}
+
+.slider-vertical .slider-track {
+    width: 5px !important;
+}
+
+.slider-vertical .slider-handle {
+    margin-left: -10px !important;
+}

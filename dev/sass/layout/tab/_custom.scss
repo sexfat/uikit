@@ -1,0 +1,94 @@
+.box-circle-15 {
+    border-radius: 15px;
+}
+
+.box-circle-3 {
+    border-radius: 3px;
+}
+
+//===========選號方法===========//
+.info2 {
+    display: none;
+}
+
+// 給予按鈕上下排列時的空間
+#lotteryGameset {
+    .panel-footer button,
+    .lotteryGametype button {
+        margin-bottom: 5px
+    }
+}
+
+//===========樂透選號TAB的群組名===========//
+#lotteryGameset {
+    margin: 20px 0;
+    label {
+        font-weight: bold;
+    }
+    ul>li {
+        font-weight: bold;
+    }
+}
+
+//選取方式
+.lotteryGametype label {
+    border-left: 3px solid #e70033;
+    margin: 0 0px 10px 0;
+    padding-left: 5px;
+}
+
+//選號區 樂透球設定
+.lotteryNumbericon {
+    @include lotteryball;
+}
+
+//---sidebar----//
+#LotteryRecordList>div>ul>li>div {
+    vertical-align: middle;
+    margin: 10px;
+    time {
+
+        width: 120px;
+        float: left
+    }
+}
+
+.lucky_ball.LotteryRecord .ball {
+    @include lotteryball-Mini;
+}
+
+
+
+//香港特碼選號0-49號 的樂透球 群組---------------
+.lotteryNumberGroup_1 {
+    li {
+        float: left;
+        margin: 1.3em 1em;
+    }
+    em {
+        font-size: 0.8em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        color: $lightRed;
+    }
+    input {
+        width: 5em;
+        color: $darkBlue;
+        font-weight: 300;
+    } 
+
+    //香港特碼選號0-49號 的樂透球設定（mixin檔） 彩虹色 
+    
+    li:nth-child(6n+1)>.lotteryNumbericon_1,
+    li:nth-child(6n+2)>.lotteryNumbericon_1 {
+        @include lotteryball-unselect( $background-color: #ed002e, $fontcolor:$white);
+    }
+    li:nth-child(6n+3)>.lotteryNumbericon_1,
+    li:nth-child(6n+4)>.lotteryNumbericon_1 {
+        @include lotteryball-unselect( $background-color: #04bc27, $fontcolor:$white);
+    }
+    li:nth-child(6n+5)>.lotteryNumbericon_1,
+    li:nth-child(6n+6)>.lotteryNumbericon_1 {
+        @include lotteryball-unselect( $background-color: #0467b7, $fontcolor:$white);
+    }
+}
