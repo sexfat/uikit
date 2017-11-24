@@ -6,7 +6,7 @@ var path = {
     pug: [
         './dev/app/pug/*.pug'
     ],
-    html: './pug'
+    html: './dest/'
 };
 
 
