@@ -3,9 +3,8 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
     postcss = require('gulp-postcss'),
-    gulpPlumber = require('gulp-plumber');
-
-
+    gulpPlumber = require('gulp-plumber'),
+    notify = require("gulp-notify");
 //路徑
 
 
@@ -46,5 +45,6 @@ var web = {
             }))
             .pipe(sourcemaps.write('.'))
             .pipe(gulp.dest('./dest/assets/css/')) //指定編譯後的路徑
+            .pipe(notify("Found file: <%= file.relative %>!"))
     });
 

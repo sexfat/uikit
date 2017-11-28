@@ -9,7 +9,7 @@ var gulp = require('gulp');
 // 刷新瀏覽器並同步
 var browerSync =  require('./gulp/task/browerSync.js');
 // 選擇 1.html 使用app/html   2.pug 使用app/pug  3. all 使用全部
-var selectMoudule = new browerSync ('pug')  // html or pug or all
+var selectMoudule = new browerSync ('all')  // html or pug or all
 
 
 //打包

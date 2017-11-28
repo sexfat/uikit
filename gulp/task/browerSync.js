@@ -3,33 +3,50 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     reload = browserSync.reload;
 
-//html style
-require('../scripts/html_template.js');
-require('../scripts/html_pug.js');
-require('../scripts/jshint.js');
-require('../scripts/style.js');
-
-
-
-
-var web = {
-    sass: [
-        'dev/sass/*.scss',
-        'dev/sass/**/*.scss',
-        'dev/sass/**/**/*.scss'
-    ],
-    css: [
-        './dest/assets/css/*.css',
-        './dest/assets/css/**/*.css'
-    ]
-};
-
 
 // 用 module 的概念傳遞值
 module.exports = function (fnc) {
 
+
+    if (fnc == 'html') {
+        require('../scripts/html_template.js');
+    }
+    else if (fnc == 'pug') {
+        require('../scripts/html_pug.js');
+    }
+    else if (fnc == 'all') {
+        require('../scripts/html_template.js');
+        require('../scripts/html_pug.js');
+
+    }
+
+
+    //html style
+
+   
+    require('../scripts/jshint.js');
+    require('../scripts/style.js');
+
+
+
+
+    var web = {
+        sass: [
+            'dev/sass/*.scss',
+            'dev/sass/**/*.scss',
+            'dev/sass/**/**/*.scss'
+        ],
+        css: [
+            './dest/assets/css/*.css',
+            './dest/assets/css/**/*.css'
+        ]
+    };
+
+
+
+
     //broswerSync static
-    gulp.task('static', ['styles', 'fileinclude'], function () {
+    gulp.task('static', ['styles'], function () {
         browserSync.init({
             server: {
                 baseDir: "./dest",

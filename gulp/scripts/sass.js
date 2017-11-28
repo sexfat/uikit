@@ -1,4 +1,5 @@
-var  sass = require('gulp-sass');
+var  sass = require('gulp-sass'),
+     notify = require("gulp-notify");
 
 //  sass
 gulp.task('styles', function () {
@@ -11,4 +12,5 @@ gulp.task('styles', function () {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./dest/assets/css')) //指定編譯後的路徑
+        .pipe(notify("sass finish"))
 });
