@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
     postcss = require('gulp-postcss'),
-    gulpPlumber = require('gulp-plumber'),
+    plumber = require('gulp-plumber'),
     notify = require("gulp-notify");
 //路徑
 
@@ -21,30 +21,31 @@ var web = {
 
 
 
-    // autoprefixer  前綴字
-    gulp.task('css', function () {
-        var plugins = [
-            autoprefixer({
-                broswer: ['last 1 vrsion']
-            })
-        ];
-        return gulp.src('./dest/assets/css/*.css')
-            .pipe(gulpPlumber())
-            .pipe(postcss(plugins))
-            .pipe(gulp.dest('./dest/assets/css/autoprefixer/'));
-    });
+// autoprefixer  前綴字
+gulp.task('css', function () {
+    var plugins = [
+        autoprefixer({
+            broswer: ['last 1 vrsion']
+        })
+    ];
+    return gulp.src('./dest/assets/css/*.css')
+        .pipe(gulpPlumber())
+        .pipe(postcss(plugins))
+        .pipe(gulp.dest('./dest/assets/css/autoprefixer/'));
+});
 
-    //  sass
-    gulp.task('styles', function () {
-        return gulp.src(web.sass) //要處理的scss檔案
-            //  .pipe(gulpPlumber())
-            .pipe(sourcemaps.init())
-            .pipe(sass().on('error', sass.logError))
-            .pipe(sass({
-                outputStyle: 'expanded' // compact , expanded, nested
-            }))
-            .pipe(sourcemaps.write('.'))
-            .pipe(gulp.dest('./dest/assets/css/')) //指定編譯後的路徑
-            .pipe(notify("Found file: <%= file.relative %>!"))
-    });
+//  sass
+gulp.task('styles', function () {
+    return gulp.src(web.sass) //要處理的scss檔案
+        //  .pipe(gulpPlumber())
+        .pipe(sourcemaps.init())
+        .pipe(plumber({errorHandler: notify.onError("Sass錯誤訊息 : <%= error.message %>")}))
+        .pipe(sass({
+            outputStyle: 'expanded',// compact , expanded, nested
+        }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./dest/assets/css/')) //指定編譯後的路徑
+        // .pipe(notify({ message: 'Styles task complete' }));
+});
+
 
