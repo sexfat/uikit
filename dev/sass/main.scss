@@ -53,8 +53,12 @@
 @include margin(left,200);
 @include margin(right,100);
 .box {
-    width: 20px;
+      width: 20px;
 }
+   .box {
+
+    margin-top: 10px;
+   }
 
 
 

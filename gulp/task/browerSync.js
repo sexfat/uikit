@@ -1,8 +1,9 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     plumber = require('gulp-plumber'),
+    connect = require('gulp-connect-php'),
+    // php = require('../scripts/connect-php.js'),   
     reload = browserSync.reload;
-
 
 // 用 module 的概念傳遞值
 module.exports = function (fnc) {
@@ -39,6 +40,10 @@ module.exports = function (fnc) {
         css: [
             './dest/assets/css/*.css',
             './dest/assets/css/**/*.css'
+        ],
+        php: [
+            '*.php',
+            '**/*.php'            
         ]
     };
 
@@ -66,4 +71,28 @@ module.exports = function (fnc) {
         // gulp.watch('assets/css/*.css', ['css']).on('change', reload); //watch  autofixser
         gulp.watch('dev/js/*.js', ['lint']).on('change', reload); //watch  js lint
     });
+
+    //broswersync dymanic
+    gulp.task('dynamic', ['styles'], function () {
+        connect.server({}, function (){
+            browserSync({
+              proxy: '127.0.0.1:8000',
+              base: './dest',
+              index: "index.php"
+            });
+          });
+        gulp.watch(web.sass, ['styles']).on('change', reload); //watch  sass
+        gulp.watch(web.php).on('change', reload); // 
+    });
+
 }
+
+
+
+
+
+
+
+
+
+

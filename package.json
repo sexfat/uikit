@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.8.11",
-    "gulp-ruby-sass": "~2.1.1"
+    "gulp-prompt": "^1.0.0",
+    "gulp-ruby-sass": "~2.1.1",
+    "gulp-util": "^3.0.8"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
