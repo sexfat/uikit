@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var prompt = require("gulp-prompt");
+var mamp = require('gulp-mamp');
 
 
 //樣式 sass style
@@ -16,6 +17,7 @@ var selectMoudule = new browerSync('all') // html or pug or all
 //打包
 
 var build = require('./gulp/scripts/copy_dist.js');
+var build = require('./gulp/scripts/connect-php.js');
 
 
 //壓縮
@@ -29,23 +31,24 @@ var build = require('./gulp/scripts/copy_dist.js');
 
 
 // 一般開發
-gulp.task('default', ['styles', 'static']);
+gulp.task('default', ['styles', 'static' , 'libs']);
 
 //server 專案
-gulp.task('server', ['styles', 'dynamic']);
+gulp.task('server', ['styles', 'connect-sync']);
 
 //打包專案
 gulp.task('build', ['dist']);
-
 //壓縮專案
 
 //清除檔案
 
 gulp.task('clear', ['clean']);
 
-
 //test function
 // gulp.task('test', ['styles']);
+
+
+
 
 
 

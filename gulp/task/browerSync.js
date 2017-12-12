@@ -76,14 +76,24 @@ module.exports = function (fnc) {
     gulp.task('dynamic', ['styles'], function () {
         connect.server({}, function (){
             browserSync({
-              proxy: '127.0.0.1:8000',
-              base: './dest',
-              index: "index.php"
+              proxy: 'http://localhost/'
             });
           });
         gulp.watch(web.sass, ['styles']).on('change', reload); //watch  sass
         gulp.watch(web.php).on('change', reload); // 
     });
+    
+    gulp.task('dynamics', function() {
+        browserSync.init({
+            proxy: "localhost", 
+            reloadOnRestart: true
+            
+        });
+        gulp.watch("./*.php").on("change", browserSync.reload);
+    });
+
+
+
 
 }
 

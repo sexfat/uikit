@@ -69,3 +69,10 @@ gulp.task('dist' , ['clean'] ,function () {
         })
         .pipe(gulp.dest('./dist/'))
 });
+
+//lib搬家用的
+
+gulp.task('libs', function () {
+    return gulp.src('./libs/**/**/**/*') 
+        .pipe(gulp.dest('./dest/libs/'))
+});
