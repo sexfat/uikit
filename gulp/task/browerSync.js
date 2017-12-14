@@ -18,7 +18,6 @@ module.exports = function (fnc) {
     else if (fnc == 'all') {
         require('../scripts/html_template.js');
         require('../scripts/html_pug.js');
-
     }
 
 
@@ -47,15 +46,12 @@ module.exports = function (fnc) {
         ]
     };
 
-
-
-
     //broswerSync static
     gulp.task('static', ['styles'], function () {
         browserSync.init({
             server: {
                 baseDir: "./dest",
-                index: "index.html"
+                index: 'tween.html'
             }
         });
         gulp.watch(web.sass, ['styles']).on('change', reload); //watch  sass

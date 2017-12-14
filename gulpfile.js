@@ -14,6 +14,7 @@ var browerSync = require('./gulp/task/browerSync.js');
 var selectMoudule = new browerSync('all') // html or pug or all
 
 
+
 //打包
 
 var build = require('./gulp/scripts/copy_dist.js');
@@ -32,6 +33,7 @@ var build = require('./gulp/scripts/connect-php.js');
 
 // 一般開發
 gulp.task('default', ['styles', 'static' , 'libs']);
+gulp.task('common', ['styles', 'static' ]);
 
 //server 專案
 gulp.task('server', ['styles', 'connect-sync']);
