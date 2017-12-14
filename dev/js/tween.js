@@ -66,10 +66,22 @@ TweenMax.staggerFromTo('.circle', 2, {
 console.log('sec2 ok');
 
 
-TweenMax.staggerFromTo('.line', 2.5, {
-    scaleY: 3,
-}, {
-    scaleY: 1,
-    repeat: -1,
-    ease: Elastic.easeOut
-}, 0.1);
+
+$('.button').on('click', function () {
+    TweenMax.staggerFromTo('.line', 2.5, {
+        scaleY: 3,
+    }, {
+        scaleY: 1,
+        // -1值是一直重複
+        // repeat: -1,
+        ease: Elastic.easeOut
+    }, 0.1);
+
+});
+
+
+TweenMax.to('.fullwidth', .7, {
+    // height: '90%',
+    scaleY: '160%',
+    ease: Expo.easeOut
+});
