@@ -80,8 +80,10 @@ $('.button').on('click', function () {
 });
 
 
-TweenMax.to('.fullwidth', .7, {
-    // height: '90%',
-    scaleY: '160%',
+TweenMax.fromTo('.fullwidth', 6,{
+    height: '0%',
+},{
+    height: '100%',
+    // scaleY: '160%',
     ease: Expo.easeOut
 });

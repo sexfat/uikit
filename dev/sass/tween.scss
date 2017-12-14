@@ -51,7 +51,11 @@
     .section2 {}
     .fullwidth {
      width: 100%;
-     height: 1%;
+    //  height: 0%;
      background-color:#ffaa22; 
+     background: url(' https://placem.at/people') no-repeat center center;
+     background-size: cover;
+     overflow: hidden;
+     
     }
 }
