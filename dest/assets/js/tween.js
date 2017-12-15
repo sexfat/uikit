@@ -80,10 +80,58 @@ $('.button').on('click', function () {
 });
 
 
-TweenMax.fromTo('.fullwidth', 6,{
+TweenMax.fromTo('.fullwidth', 6, {
     height: '0%',
-},{
+}, {
     height: '100%',
     // scaleY: '160%',
     ease: Expo.easeOut
 });
+
+//tweenmax option 使用方式
+
+TweenMax.to('.box9', 1, {
+    x: '0',
+    // rotationY: 720,
+    rotationX: 360,
+    //定位點
+    transformOrigin: '80px 10px',
+    // autoAlpha: 1,
+    // repeat: 2,
+    // delay: 2
+    className: "+=box10"
+});
+
+//設定變數
+var points = [{
+    x: 100,
+    y: 200
+}, {
+    x: 250,
+    y: 20
+}, {
+    x: 400,
+    y: 50
+}];
+
+TweenMax.to('.box10', 1, {
+    bezier: {
+        curviness: 1.25,
+        values: points,
+        autoRotate:true
+    },
+    ease: Power1.easeOut
+});
+
+//改變svg的屬性
+TweenMax.to('#rects', 4, {
+    attr: {
+        width:1000,
+        height: 300
+    }   
+});
+
+
+
+
+console.log('end ok');
