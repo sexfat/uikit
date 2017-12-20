@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var prompt = require("gulp-prompt");
-var mamp = require('gulp-mamp');
 
 
 //樣式 sass style
@@ -18,7 +17,7 @@ var selectMoudule = new browerSync('all') // html or pug or all
 //打包
 
 var build = require('./gulp/scripts/copy_dist.js');
-var build = require('./gulp/scripts/connect-php.js');
+// var build = require('./gulp/scripts/connect-php.js');
 
 
 //壓縮

@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     plumber = require('gulp-plumber'),
-    connect = require('gulp-connect-php'),
     // php = require('../scripts/connect-php.js'),   
     reload = browserSync.reload;
 
@@ -67,30 +66,6 @@ module.exports = function (fnc) {
         // gulp.watch('assets/css/*.css', ['css']).on('change', reload); //watch  autofixser
         gulp.watch('dev/js/*.js', ['lint']).on('change', reload); //watch  js lint
     });
-
-    //broswersync dymanic
-    gulp.task('dynamic', ['styles'], function () {
-        connect.server({}, function (){
-            browserSync({
-              proxy: 'http://localhost/'
-            });
-          });
-        gulp.watch(web.sass, ['styles']).on('change', reload); //watch  sass
-        gulp.watch(web.php).on('change', reload); // 
-    });
-    
-    gulp.task('dynamics', function() {
-        browserSync.init({
-            proxy: "localhost", 
-            reloadOnRestart: true
-            
-        });
-        gulp.watch("./*.php").on("change", browserSync.reload);
-    });
-
-
-
-
 }
 
 
