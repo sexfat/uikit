@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var prompt = require("gulp-prompt");
 
 
+
 //樣式 sass style
 // var styles = require('./gulp/scripts/style.js');
 
@@ -31,8 +32,8 @@ var build = require('./gulp/scripts/copy_dist.js');
 
 
 // 一般開發
-gulp.task('default', ['styles', 'static' , 'libs']);
-gulp.task('common', ['styles', 'static' ]);
+// gulp.task('default', ['styles', 'static', 'libs']);
+// gulp.task('common', ['styles', 'static']);
 
 //server 專案
 gulp.task('server', ['styles', 'connect-sync']);
@@ -43,15 +44,71 @@ gulp.task('build', ['dist']);
 
 //清除檔案
 
-gulp.task('clear', ['clean']);
+// gulp.task('clear', ['clean']);
 
 //test function
 // gulp.task('test', ['styles']);
 
 
+gulp.task('test', function () {
+    gulp.src('test.js')
+        .pipe(prompt.confirm('Are you ready for Gulp?'))
+        .pipe(gulp.dest('dest'));
+
+});
+
+
+gulp.task('test2', function () {
+    gulp.src('test.js')
+        .pipe(prompt.confirm({
+            message: 'continue ok?',
+            default: true
+        }))
+        .pipe(gulp.dest('dest'));
+
+});
+
+
+gulp.task('test3', function () {
+    gulp.src('test.js')
+        .pipe(prompt.prompt({
+            type: 'input',
+            name: 'task',
+            message: 'which one task you can run?'
+        }, function (res) {
+            console.log('輸入:', res.task);
+        }));
+    // .pipe(gulp.dest('dest'));
+
+});
+
+
+gulp.task('selecttask', function () {
+    var  task_mission = ['all' , 'dev' , 'clear']
 
 
 
+    return gulp.src('./gulpfile.js')
+        .pipe(prompt.prompt({
+            type: 'checkbox',
+            name: 'task',
+            message: '你想執行那個任務？（ 請按空白鍵選擇 ）',
+            choices: task_mission
+        }, function (res) {
+            var selectedTask = res.task;
+            gulp.start(selectedTask);
+            // console.log('選中:', res);
+        }));
+});
+
+
+gulp.task('all', ['styles', 'static', 'libs']);
+gulp.task('dev', ['styles', 'static']);
+gulp.task('clear', ['clean']);
+
+
+
+gulp.task('default', ['selecttask']);
 
 
 
