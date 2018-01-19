@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     reload = browserSync.reload;
 
 // 用 module 的概念傳遞值
-module.exports = function (fnc) {
+module.exports = function (fnc , path) {
 
 
     if (fnc == 'html') {
