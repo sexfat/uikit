@@ -27,6 +27,21 @@ $medium-custom-grid: ( columns: 12, gutter: 20px, media:'only screen and (min-wi
 $small-custom-grid: ( columns: 12, gutter: 20px, media: 'only screen  and (max-width: 767px)', direction: ltr, );
 
 
+// map 使用斷點
+$breakpoint: ( 
+    small: 480px, 
+    medium: 720px,
+    desktop : 988px,
+    large: 1366px,
+    other: (
+       max: 340px,
+       min: 640px
+      )
+    );
+
+
+
+
 
 
 

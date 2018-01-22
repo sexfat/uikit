@@ -1,37 +1,61 @@
+//=====================
+//基本設定
+//=====================
+
+//=================
 // reset setting
+//=================
 @import "base/reset";
+
+//=================
 // plugin setting
+//=================
 // @import "vender/bootstrap-sass/bootstrap";
 
-// vender setting
 
-@import "reference/styles";
-@import "reference/plugins";
-@import "reference/themes/lyt2-theme-1";
-//
+//=================
+// base setting
+//=================
 @import "base/setting";
+@import "mixin/mixins";
+@import "base/color";
+
+
+//=================
+//font setting
+//=================
 @import "base/font_family";
 @import "base/font";
-@import "mixin/mixins";
 @import "base/common";
 
 
+//=================
+// vender setting
+//=================
 
+@import "reference/styles";
+@import "reference/plugins";
 
-
-
+//=================
 // libary setting
+//=================
 // @import "libs/animate-sass/animate";
-// @ims
 // @import "libs/hover/scss/hover";
 // @import "libs/owl.carousel/src/scss/owl.carousel";
 // @import "libs/owl.carousel/src/scss/owl.theme.default";
-@import "base/plugin";
-
-//設定
 
 
+//=================
+// modules 模組 每個專案都會累積不同的
+// 要詳細寫說明
+//=================
+@import "modules/link";
+
+
+//=================
 //pages
+//=================
+
 @import "respond/custom";
 
 //桌機
@@ -49,16 +73,12 @@
 }
 
 
+//other
+
 @include margin(top,100);
 @include margin(left,200);
 @include margin(right,100);
-.box {
-      width: 20px;
-}
-   .box {
 
-    margin-top: 10px;
-   }
 
 
 

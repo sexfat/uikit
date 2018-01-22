@@ -11,6 +11,8 @@
 //moblie
 
 //s_col_1  { width: 8.33333%;  }
+
+
 @import "rwd";
 
 *,
@@ -19,21 +21,6 @@
   @include box-sizing(border-box);
 }
 
-// .container {
-//
-// @include respond-to(large) {
-//    width:1366px;
-//    @include margin-auto();
-//   };
-// @include respond-to(medium) {
-//   width:800px;
-//   @include margin-auto();
-//   };
-// @include respond-to(small) {
-//   width:640px;
-//   @include margin-auto();
-//   };
-// }
 
 .content {
   @include rem("width", $Width);

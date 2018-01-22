@@ -19,8 +19,6 @@ var web = {
 };
 
 
-
-
 // autoprefixer  前綴字
 gulp.task('css', function () {
     var plugins = [
@@ -35,17 +33,22 @@ gulp.task('css', function () {
 });
 
 //  sass
-gulp.task('styles', function () {
+gulp.task('sass', function () {
     return gulp.src(web.sass) //要處理的scss檔案
         //  .pipe(gulpPlumber())
         .pipe(sourcemaps.init())
-        .pipe(plumber({errorHandler: notify.onError("Sass錯誤訊息 : <%= error.message %>")}))
+        .pipe(plumber({
+            errorHandler: notify.onError("Sass錯誤訊息 : <%= error.message %>")
+        }))
         .pipe(sass({
-            outputStyle: 'expanded',// compact , expanded, nested
+            outputStyle: 'expanded', // compact , expanded, nested
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./dest/assets/css/')) //指定編譯後的路徑
-        // .pipe(notify({ message: 'Styles task complete' }));
+    // .pipe(notify({ message: 'Styles task complete' }));
 });
 
-
+gulp.task('watch', function () {
+    //監看所有檔案
+    gulp.watch(web.sass , ['sass']);
+  });

@@ -86,7 +86,7 @@ gulp.task('test3', function () {
 gulp.task('selecttask', function () {
     
     //三種模式用變數帶出來    
-    var  task_mission = ['all' , 'dev' , 'clear']
+    var  task_mission = ['all' , 'dev' , 'clear' , 'style']
 
     return gulp.src('./gulpfile.js')
         .pipe(prompt.prompt({
@@ -102,9 +102,11 @@ gulp.task('selecttask', function () {
 });
 
 // 執行模式  會相對應上方的task_mission 變數
-gulp.task('all', ['styles', 'static', 'libs']);
-gulp.task('dev', ['styles', 'static']);
+gulp.task('all', ['sass', 'static', 'libs']);
+gulp.task('dev', ['sass', 'static']);
 gulp.task('clear', ['clean']);
+gulp.task('style', ['sass' , 'watch']);
+
 
 
 

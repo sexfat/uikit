@@ -9,6 +9,12 @@
 // @include respond-to(medium) { ... }
 // @include respond-to(large) { ... }
 
+//
+// @include respond (medium) {}
+
+
+
+
 @mixin respond-to($breakpoint) {
   @if $breakpoint == "small" {
     @media all and (max-width: $small) {
@@ -28,3 +34,14 @@
     }
   }
 }
+
+
+@mixin respond($res) {
+  @each $viewpoint,$num in $breakpoint {
+      @if $res == $viewpoint {
+          @media all and (min-width: $num) {
+              @content
+          }
+      }
+  }
+};

@@ -10,33 +10,8 @@ $map: ( key: value, key1: 10px, key2: 20px, key3: 30px, key4: 40px, key5: 50px, 
     content: map-keys($map);
 }
 
-// map 使用斷點
-$breakpoint: ( 
-    small: 480px, 
-    medium: 720px,
-    desktop : 988px,
-    large: 1366px,
-    other: (
-       max: 340px,
-       min: 640px
-      )
-    );
-@mixin respond($res) {
-    @each $viewpoint,$num in $breakpoint {
-        @if $res == $viewpoint {
-            @media all and (min-width: $num) {
-                @content
-            }
-        }
-    }
-}
 
-;
-@include respond (medium) {
-    .box {
-        margin: 10px;
-    }
-}
+
 
 // @each $huang in (10px, 20px, 30px) {
 //     .box {
@@ -58,12 +33,15 @@ $themecolor: (
   theme-red : red ,
   theme-yellow : yellow,
   theme-purple : #aa0adb, 
-  theme-blue: blue,
+  theme-blue: rgb(36, 12, 141),
 )!default;
 
 @each $class , $color in $themecolor {
   @include color ($class, $color);
 }
+
+
+
 
 
 
