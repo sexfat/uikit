@@ -46,14 +46,14 @@ module.exports = function (fnc , path) {
     };
 
     //broswerSync static
-    gulp.task('static', ['styles'], function () {
+    gulp.task('static', ['sass'], function () {
         browserSync.init({
             server: {
                 baseDir: "./dest",
-                index: 'tween.html'
+                index: 'main.html'
             }
         });
-        gulp.watch(web.sass, ['styles']).on('change', reload); //watch  sass
+        gulp.watch(web.sass, ['sass']).on('change', reload); //watch  sass
         gulp.watch('./dest/*.html').on('change', reload); // 
         if (fnc == 'html') {
             gulp.watch(['./dev/app/html/*.html', './dev/app/html/**/*.html'], ['fileinclude']).on('change', reload); //watch  sass

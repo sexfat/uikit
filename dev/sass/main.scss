@@ -43,6 +43,7 @@
 // @import "libs/hover/scss/hover";
 // @import "libs/owl.carousel/src/scss/owl.carousel";
 // @import "libs/owl.carousel/src/scss/owl.theme.default";
+@import "../../libs/hover/scss/hover";
 
 
 //=================
@@ -50,6 +51,7 @@
 // 要詳細寫說明
 //=================
 @import "modules/link";
+
 
 
 //=================
@@ -61,16 +63,35 @@
 //桌機
 @include grid-media($custom-grid) {
     @import "respond/desktop"; 
+    @for $i from 1 through 100 {
+        .l#{$i} {
+            width: $i * 1%;
+            display: inline-block;
+        }
+    }
 }
 //平板
 @include grid-media($medium-custom-grid) {
     @import "respond/medium";
+    @for $i from 1 through 100 {
+        .m#{$i} {
+            width: $i * 1%;
+            display: inline-block;
+        }
+    }
 
 }
 //手機
 @include grid-media($small-custom-grid) {
     @import 'respond/small';    
+    @for $i from 1 through 100 {
+        .s#{$i} {
+            width: $i * 1%;
+            display: inline-block;
+        }
+    }
 }
+
 
 
 //other
@@ -78,6 +99,8 @@
 @include margin(top,100);
 @include margin(left,200);
 @include margin(right,100);
+
+
 
 
 
