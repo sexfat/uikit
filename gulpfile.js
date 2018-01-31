@@ -77,10 +77,6 @@ gulp.task('dev', ['sass', 'static']);
 gulp.task('clear', ['clean']);
 gulp.task('style', ['sass' , 'watch']);
 
-
-
-
-
 //執行
 gulp.task('default', ['selecttask']);
 
@@ -91,4 +87,8 @@ gulp.task('default', ['selecttask']);
 
 
 
-//test
+
+
+
+
+//搬家

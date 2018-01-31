@@ -50,6 +50,7 @@
     "jshint": "^2.9.5",
     "moment": "^2.7.0",
     "postcss-short-color": "^2.0.1",
-    "pug": "^2.0.0-rc.2"
+    "pug": "^2.0.0-rc.2",
+    "stylus": "^0.54.5"
   }
 }
