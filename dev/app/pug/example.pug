@@ -1,0 +1,25 @@
+//- mixn 集合
+include base/var.pug
+include mixins/mixin.pug
+doctype
+html
+  head
+    title= titles
+    block meta
+     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    block scripts
+      +script(['./js/style.js' , './js/css.js'])
+  body 
+    include layout/header.pug
+    block content
+    mixin list(id, name , name1)
+      ul(class= id)
+       li= name
+       li= name1
+    //- 使用   
+
+
+    +list('wrapper', 'good' , 'good2')
+    
+    
+    +list('wrapper', 'good' , 'good2')

@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     reload = browserSync.reload;
 
 // 用 module 的概念傳遞值
-module.exports = function (fnc , path) {
+module.exports = function (fnc) {
 
 
     if (fnc == 'html') {
@@ -50,7 +50,7 @@ module.exports = function (fnc , path) {
         browserSync.init({
             server: {
                 baseDir: "./dest",
-                index: 'main.html'
+                index: 'animation.html'
             }
         });
         gulp.watch(web.sass, ['sass']).on('change', reload); //watch  sass

@@ -1,6 +1,6 @@
 //- mixn 集合
-include ../mixins/mixin.pug
 include ../base/var.pug
+include ../mixins/mixin.pug
 doctype
 html
   head
@@ -8,7 +8,13 @@ html
     block meta
      meta(name="viewport" content="width=device-width, initial-scale=1.0")
     block scripts
-     script(src='./jquery.js')
+      +script(['./js/style.js' , './js/css.js'])
   body 
     include ../layout/header.pug
     block content
+
+
+
+
+
+    
