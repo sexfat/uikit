@@ -9,17 +9,36 @@ html
      meta(name="viewport" content="width=device-width, initial-scale=1.0")
     block scripts
       +script(['./js/style.js' , './js/css.js'])
+      +css(['style.css' , 'margin.css'])
   body 
     include layout/header.pug
     block content
+    //- mixin start
     mixin list(id, name , name1)
       ul(class= id)
        li= name
        li= name1
+    
+    mixin box(name , name1)
+      ul
+       li= name
+       li= name1
+       block   
+    //- end   
+    //- extend start
+    extends extends/extend-a
+     block content
+      h1 contes
+    //- extend end
+
     //- 使用   
 
+    +list('wrapper', 'good' , 'good2')
+    +list('wrappers', 'good' , 'goo2')
+    +box('margins' , 'vergin')
+      p 100
+      span 90
 
-    +list('wrapper', 'good' , 'good2')
-    
-    
-    +list('wrapper', 'good' , 'good2')
+
+
+
