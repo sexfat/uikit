@@ -26,8 +26,6 @@ html
        block   
     //- end   
     //- extend start
-    extends extends/extend-a
-     block content
       h1 contes
     //- extend end
 
@@ -38,6 +36,13 @@ html
     +box('margins' , 'vergin')
       p 100
       span 90
+
+extends layout.pug
+block content
+ p 100
+block footer 
+ span 200
+
 
 
 
