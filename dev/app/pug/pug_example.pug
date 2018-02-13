@@ -1,49 +1,9 @@
-//- mixn 集合
-include base/var.pug
-include mixins/mixin.pug
-doctype
-html
-  head
-    title= titles
-    block meta
-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    block scripts
-      +script(['./js/style.js' , './js/css.js'])
-      +css(['style.css' , 'margin.css'])
-  body 
-    include layout/header.pug
-    block content
-    //- mixin start
-    mixin list(id, name , name1)
-      ul(class= id)
-       li= name
-       li= name1
-    
-    mixin box(name , name1)
-      ul
-       li= name
-       li= name1
-       block   
-    //- end   
-    //- extend start
-      h1 contes
-    //- extend end
-
-    //- 使用   
-
-    +list('wrapper', 'good' , 'good2')
-    +list('wrappers', 'good' , 'goo2')
-    +box('margins' , 'vergin')
-      p 100
-      span 90
-
-extends layout.pug
+extends ./temp/template.pug
+block  scripts
+  +css(['./css/style.css' , './css/main.js'])
 block content
- p 100
-block footer 
- span 200
-
-
-
-
+  include ./layout/header.pug
+  p 100
+  +script(['./js/scripts.js' , './js/output.js'])
+  +list('box', 1,2,3,4)
 
