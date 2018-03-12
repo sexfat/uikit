@@ -50,7 +50,7 @@ module.exports = function (fnc) {
         browserSync.init({
             server: {
                 baseDir: "./dest",
-                index: 'animation.html'
+                index: 'index.html'
             }
         });
         gulp.watch(web.sass, ['sass']).on('change', reload); //watch  sass

@@ -1,0 +1,48 @@
+.specs {
+    font-size: 16px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    width: 90%;
+    color: #fff;
+    .box {
+        background-color: #999;
+        margin-top: 6px;
+        border-radius: 5px;
+        &:hover {
+            opacity: 0.9;
+        }
+        .lit {
+            font-size: 0.4rem;
+            position: absolute;
+        }
+        .mato  {
+            padding: 20px  10px;
+        }
+        .icon {
+           @extend .mato;
+           margin-left: 10px;
+        }
+        .pro_name {
+            @extend .mato;
+            margin-left: 20px;
+            width: 100px;
+        }
+        .pro_start {
+            @extend .mato;
+            margin-left: 10px;
+        }
+        .pro_end {
+            @extend .mato;
+            margin-left: 120px;
+        }
+    }
+    .inlineblock {
+       display: inline-block;
+    }
+    .box_blue {
+        background-color: rgb(24, 43, 128);
+    }
+    .box_blue_light {
+        background-color: rgb(31, 61, 196);
+    }
+}
