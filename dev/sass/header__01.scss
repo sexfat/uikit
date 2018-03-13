@@ -1,0 +1,22 @@
+//=====================
+//基本設定
+//=====================
+
+//=================
+// reset setting
+//=================
+@import "base/reset";
+
+//=================
+// base setting
+//=================
+@import "base/setting";
+@import "mixin/mixins";
+@import "base/color";
+
+//=================
+//font setting
+//=================
+@import "base/font_family";
+@import "base/font";
+@import "base/common";

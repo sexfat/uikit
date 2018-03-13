@@ -1,0 +1,95 @@
+.boxs 
+  font-size: 1320px
+  margin: 1222px
+  padding: 120px
+.box
+  #er 
+    span
+      div
+       width: 10px
+       padding: 10px
+
+a
+ color: #000000
+
+textarea 
+input
+ border: 1px soild #324
+ &:hover 
+   color: #333
+   .dif
+     width:10px
+  
+
+font-size = 120rem
+
+.dot
+  font: font-size arial
+//變數
+w = 100px
+h = 200px
+
+#dor 
+  height : h
+  width : w
+  top: h * 2
+  left: w * 3 
+
+
+//mixin
+
+ter()
+ position: absolute
+ {block}
+
+
+//帶值
+border-radius(n)
+  border-radius n
+  -webkit-border-radius n
+  -moz-border-radius n
+  +ter()
+   height: w
+
+
+margin(top , left, right, bottom)
+  margin-left: left
+  margin-right: right
+  margin-top: top
+  margin-bottom: bottom
+
+
+.boxer 
+  margin(10px , 20px, 30px, 40px)
+
+
+#border 
+  border-radius(10px)
+
+foo()
+ .bot
+  {block}
+  height: 20px
+
++foo()
+  width: 10px
+
+sizes = 10px 20px 30px 40px
+
+.box 
+    width: sizes[1]
+//extend
+.ets
+  padding: 10px 
+  @extend .boxer
+
+
+// root(num)
+//   if num > 10
+//    margin : num
+//   else
+//    margin : num * 2
+
+
+// .gabs
+//   root(20)
