@@ -25,8 +25,7 @@ module.exports = function (fnc) {
    
     require('../scripts/jshint.js');
     require('../scripts/style.js');
-
-
+    require('../scripts/stylus.js');
 
 
     var web = {
@@ -42,6 +41,10 @@ module.exports = function (fnc) {
         php: [
             '*.php',
             '**/*.php'            
+        ],
+        stylus : [
+            './dev/sty/*.styl',
+            './dev/sty/**/*.styl'
         ]
     };
 
@@ -50,10 +53,11 @@ module.exports = function (fnc) {
         browserSync.init({
             server: {
                 baseDir: "./dest",
-                index: 'index.html'
+                index: 'header_01.html'
             }
         });
         gulp.watch(web.sass, ['sass']).on('change', reload); //watch  sass
+        gulp.watch(web.stylus , ['stylus']).on('change', reload); //watch  stylus
         gulp.watch('./dest/*.html').on('change', reload); // 
         if (fnc == 'html') {
             gulp.watch(['./dev/app/html/*.html', './dev/app/html/**/*.html'], ['fileinclude']).on('change', reload); //watch  sass

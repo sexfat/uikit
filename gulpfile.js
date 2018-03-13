@@ -3,8 +3,11 @@ var prompt = require("gulp-prompt");
 
 
 
+
+
 //樣式 sass style
 // var styles = require('./gulp/scripts/style.js');
+var styles = require('./gulp/scripts/stylus.js');
 
 
 
@@ -56,7 +59,7 @@ gulp.task('build', ['dist']);
 gulp.task('selecttask', function () {
     
     //三種模式用變數帶出來    
-    var  task_mission = ['all' , 'dev' , 'clear' , 'style']
+    var  task_mission = ['all' , 'dev' , 'clear' , 'style' ,'stylus']
 
     return gulp.src('./gulpfile.js')
         .pipe(prompt.prompt({
@@ -76,6 +79,7 @@ gulp.task('all', ['sass', 'static', 'libs']);
 gulp.task('dev', ['sass', 'static']);
 gulp.task('clear', ['clean']);
 gulp.task('style', ['sass' , 'watch']);
+gulp.task('stylus', ['stylus_follow']);
 
 //執行
 gulp.task('default', ['selecttask']);
