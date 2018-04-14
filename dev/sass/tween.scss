@@ -32,18 +32,22 @@
        }
     }
     .box {
-        width: 300px;
-        height: 50px;
-        background-color: rgb(255, 234, 112);
-        padding-top: 10px;
-        padding-left: 10px;
-        margin-top: 10px;
-        margin-left: 10px;
+        // width: 100px;
+        // height: 50px;
+        // background-color: rgb(255, 234, 112);
+        // padding-top: 10px;
+        // padding-left: 10px;
+        // margin-top: 10px;
+        // margin-left: 10px;
+        @include circle(100 , 10 ,red);
      }
      .circle {
-         border-radius: 50px;
-         width: 50px;
-         height: 50px;
+        //  border-radius: 50px;
+        //  width: 50px;
+        //  height: 50px;
+        @include circle(50 , 10 , #fff);
+
+
      }
     .section1 {
 
