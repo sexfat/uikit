@@ -30,8 +30,19 @@
 body {
   height: 1400px;
   #logo {
-    margin-top: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
 
+  }
+  header {
+     #nav {
+      display: flex;
+      flex-direction: wrap;
+      li {
+        width: 100px;
+        height: 20px; 
+      } 
+     }
   }
 }
 
