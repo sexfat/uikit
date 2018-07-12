@@ -53,7 +53,7 @@ module.exports = function (fnc) {
         browserSync.init({
             server: {
                 baseDir: "./dest",
-                index: 'header_01.html'
+                index: 'flex.html'
             }
         });
         gulp.watch(web.sass, ['sass']).on('change', reload); //watch  sass

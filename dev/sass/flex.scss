@@ -1,0 +1,40 @@
+//=====================
+//基本設定
+//=====================
+//=================
+// reset setting
+//=================
+@import "base/reset";
+//=================
+// plugin setting
+//=================
+// @import "vender/bootstrap-sass/bootstrap";
+//=================
+// base setting
+//=================
+@import "base/setting";
+@import "mixin/mixins";
+@import "base/color";
+//=================
+//font setting
+//=================
+@import "base/font_family";
+@import "base/font";
+@import "base/common";
+.flex-container {
+    display: flex;
+    background-color: rgb(255, 166, 1);
+    height: 300px;
+    flex-direction: row;
+    .item {
+        flex: 1;
+        background-color: rgb(186, 218, 10);
+        margin: 10px;
+        // flex-grow: 3
+    }
+    .item {
+        flex-grow: 2;
+    }
+}
+
+
