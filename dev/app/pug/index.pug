@@ -1,9 +1,6 @@
 extends ./temp/template.pug
-block meta
- meta(name="viewport" content="width=device-width, initial-scale=1.0")
-block scripts
- +script(['js/index.js' , 'js/scripts.js'])
-
- 
-
- 
+block  scripts
+  +css(['./assets/css/header__01.css'])
+block content
+  include ./layout/header.pug 
+//-   +script(['./assets/js/scroll.js' , './assets/js/ajax.js'])

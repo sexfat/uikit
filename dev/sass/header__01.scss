@@ -1,52 +1,40 @@
 //=====================
 //基本設定
 //=====================
-
 //=================
 // reset setting
 //=================
 @import "base/reset";
-
 //=================
 // base setting
 //=================
 @import "base/setting";
 @import "mixin/mixins";
 @import "base/color";
-
 //=================
 //font setting
 //=================
 @import "base/font_family";
 @import "base/font";
 @import "base/common";
-
-
-
 //header__01 page
-
-
-
 body {
-  height: 1400px;
-  #logo {
-    margin-top: 10px;
-    margin-left: 20px;
+    header {
+        padding-top: 1px;
+        width: 100%;
+        line-height: 5rem;
+        #logo {
+           width: 100px;
+            margin-top: 5px;
+            margin-left: 10px;
+            float: left;
+        }
+        ul {
+          float: left;
 
-  }
-  header {
-     #nav {
-      display: flex;
-      flex-direction: wrap;
-      li {
-        width: 100px;
-        height: 20px; 
-      } 
-     }
-  }
+          li {
+            display: inline-block;
+          }
+        }
+    }
 }
-
-
-
-
-

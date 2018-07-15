@@ -1,1 +1,7 @@
 $color-red: #d43f3a;
+$color-gray: #333;
+@for $i from 0 through 10 {
+   .gray-#{$i*10} {
+        background-color: darken(#fff , $i *10%);
+    }
+}
