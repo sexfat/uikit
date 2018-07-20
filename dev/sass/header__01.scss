@@ -20,20 +20,21 @@
 //header__01 page
 body {
     header {
-        padding-top: 1px;
+        padding-top: 20px;
         width: 100%;
-        line-height: 5rem;
+        padding-bottom: 20px;
         #logo {
            width: 100px;
-            margin-top: 5px;
             margin-left: 10px;
             float: left;
         }
         ul {
-          float: left;
+          float: right;
 
           li {
             display: inline-block;
+            width: 8rem;
+            height: 20px;
           }
         }
     }
