@@ -39,6 +39,7 @@
     "parallax": "^2.1.3",
     "neat": "^2.0.2",
     "compass-sass-mixins": "*",
-    "flipclock": "FlipClock#^0.7.7"
+    "flipclock": "FlipClock#^0.7.7",
+    "wow": "^1.1.2"
   }
 }
