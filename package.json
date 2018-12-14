@@ -2,24 +2,38 @@
   "name": "first",
   "version": "1.0.2",
   "description": "This is my first gulp project",
+  "private": true,
   "homepage": "",
   "author": {
     "name": "bryan",
     "email": "bryant6831@gmail.com"
   },
   "license": "ISC",
+  "scripts": {
+    "dev": "webpack --watch --mode development",
+    "prod": "webpack"
+  },
   "dependencies": {
+    "compass-sass-mixins": "^0.12.7",
+    "gsap": "^2.0.2",
     "gulp": "^3.8.11",
     "gulp-prompt": "^1.0.0",
     "gulp-ruby-sass": "~2.1.1",
+    "gulp-stylus": "^2.1.0",
     "gulp-util": "^3.0.8",
-    "gulp-stylus": "^2.1.0"
+    "hover": "^3.0.0-alpha.6",
+    "hover.css": "^2.3.2",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "neat": "^1.2.2",
+    "webpack": "^4.27.1"
   },
   "devDependencies": {
+    "@webpack-cli/init": "^0.1.2",
     "autoprefixer": "^6.7.2",
-    "bourbon-neat": "^2.0.0",
+    "bourbon-neat": "^2.1.0",
     "browser-sync": "^2.18.5",
-    "gulp-bower": "0.0.13",
+    "gulp-bower": "0.0.14",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-connect-php": "^0.0.8",
@@ -53,6 +67,7 @@
     "moment": "^2.7.0",
     "postcss-short-color": "^2.0.1",
     "pug": "^2.0.0-rc.2",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "webpack-cli": "^3.1.2"
   }
 }

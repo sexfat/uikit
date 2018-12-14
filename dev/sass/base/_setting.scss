@@ -20,7 +20,8 @@ $word-spacing   : 2px;
 //是否使用套件
 
 //rwd 
-@import "../../libs/neat/core/neat";
+@import "../../node_modules/bourbon-neat/core/neat";
+
 
 $custom-grid: ( columns: 12, gutter: 20px, media: 1200px, direction: ltr, );
 $medium-custom-grid: ( columns: 12, gutter: 20px, media:'only screen and (min-width: 768px) and (max-width: 1200px)', direction: ltr, );

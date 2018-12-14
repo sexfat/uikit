@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 gulp.task('lint', function () {
     return gulp.src('./dev/js/*.js')
         .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(gulp.dest('./dest/assets/js/'));
+        .pipe(jshint.reporter('default'));
+        //沒有webpack 時  要打開下方
+        //.pipe(gulp.dest('./dest/assets/js/'));
 });

@@ -47,8 +47,8 @@
 
 
 */
-@import "../../libs/compass-sass-mixins/lib/compass";
-@import "../../libs/compass-sass-mixins/lib/animate";
+@import "../../node_modules/compass-sass-mixins/lib/compass";
+@import "../../node_modules/compass-sass-mixins/lib/animate";
 @import "modules/variables";
 @import "partials/base";
 @import "partials/layout";

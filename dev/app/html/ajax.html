@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax以及檢核</title>
+</head>
+
+<body onload ='rwd()'>
+    <div id="text"></div>
+    <div id="info"></div>
+    <input id="idnum" name="idnum" class="form-control text-uppercase" placeholder="請輸入統一編號" type="text" value="" maxlength="10">
+    
+   <button id='valbtn' onclick="checkID();">驗證</button>
+   <span id="results"></span>
+    <div class="box">001</div>
+    <div class="box">002</div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+
+    <!-- <iframe src="https://www.ris.gov.tw/app/portal/3014" frameborder="0"></iframe>
+    <iframe src="https://jsfiddle.net/"></iframe> -->
+</body>
+
+
+
+
+
+@@loop('modules/scripts.html',[
+{"scripts" : "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"},
+{"scripts" : "./assets/js/ajax.js"}
+])
+
+</html>

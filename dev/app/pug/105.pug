@@ -1,0 +1,9 @@
+extends ./temp/template.pug
+block  scripts
+  +css(['./assets/css/105.css'])
+block content
+  include ./layout/header.pug
+  include ./layout/body.pug
+  +script(['./assets/js/scripts-bundle.js'])
+  //- +list('box', 1,2,3,4)
+
