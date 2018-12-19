@@ -25,6 +25,7 @@ var build = require('./gulp/scripts/copy_dist.js');
 
 
 //壓縮
+var autoprefixer = require("./gulp/scripts/autoprefixer.js");
 
 
 
@@ -59,7 +60,7 @@ gulp.task('build', ['dist']);
 gulp.task('selecttask', function () {
     
     //三種模式用變數帶出來    
-    var  task_mission = ['all' , 'dev' , 'clear' , 'style' ,'stylus']
+    var  task_mission = ['all' , 'dev' , 'clear' , 'style' ,'stylus' , 'comp']
 
     return gulp.src('./gulpfile.js')
         .pipe(prompt.prompt({
@@ -80,6 +81,7 @@ gulp.task('dev', ['sass', 'static']);
 gulp.task('clear', ['clean']);
 gulp.task('style', ['sass' , 'watch']);
 gulp.task('stylus', ['stylus_follow']);
+gulp.task('comp', ['autoprefixer']);
 
 //執行
 gulp.task('default', ['selecttask']);

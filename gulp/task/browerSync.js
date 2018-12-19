@@ -67,7 +67,7 @@ module.exports = function (fnc) {
             gulp.watch(['./dev/app/pug/*.pug', './dev/app/pug/**/*.pug'], ['compilePug']).on('change', reload); //watch  sass
             gulp.watch(['./dev/app/html/*.html', './dev/app/html/**/*.html'], ['fileinclude']).on('change', reload); //watch  sasss
         }
-        // gulp.watch('assets/css/*.css', ['css']).on('change', reload); //watch  autofixser
+        // gulp.watch('./dest/assets/css/*.css', ['autoprefixer']).on('change', reload); //watch  autoprefixer
         gulp.watch('dev/js/*.js', ['lint']).on('change', reload); //watch  js lint
     });
 }

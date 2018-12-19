@@ -1,13 +1,73 @@
-.boxers {
-    width: 100px;
-    height: 50px;
-    background-color: #e02121;
-}
+//=====================
+//基本設定
+//=====================
+
+//=================
+// reset setting
+//=================
+@import "base/reset";
+
+//=================
+// base setting
+//=================
+@import "base/setting";
+@import "mixin/mixins";
+@import "base/color";
 
 
-.boxer-center {
-  margin:  0 auto;
-    width: 100px;
-    height: 50px; 
-    background-color: #21e0b7;
+//=================
+//font setting
+//=================
+@import "base/font_family";
+@import "base/font";
+// @import "base/common";
+
+
+
+$lg-font: 20px;
+$container : 'fluid'; // fluid | fixed
+$primaryColor : #da6b90;
+$paddingTop : 10px;
+$fontSize : $lg-font;
+
+body {
+    background-color: $primaryColor;
+
+    .wrapper {
+        @if ($container=='fluid') {
+            width: 100%;
+        }
+
+        @else if ($container=='fixed') {
+            @include margin-auto();
+            width: 1200px;
+        }
+
+        #nav {
+            position: fixed;
+            height: 60px;
+            background: #2189ff;
+            // @include linearGradient(#f7f7f7, #c2c2c2);
+            color: #646464;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                li {
+                    flex: 0 0 20%;
+                    background-color: rgb(78, 160, 255);
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+        }
+
+    }
+
+    section {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(243, 243, 243);
+    }
 }
