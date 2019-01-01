@@ -53,7 +53,7 @@ module.exports = function (fnc) {
         browserSync.init({
             server: {
                 baseDir: "./dest",
-                index: '105.html'
+                index: 'framework.html'
             }
         });
         gulp.watch(web.sass, ['sass']).on('change', reload); //watch  sass
@@ -62,7 +62,7 @@ module.exports = function (fnc) {
         if (fnc == 'html') {
             gulp.watch(['./dev/app/html/*.html', './dev/app/html/**/*.html'], ['fileinclude']).on('change', reload); //watch  sass
         } else if (fnc == 'pug') {
-            gulp.watch(['./dev/app/pug/*.pug', './dev/app/pug/**/*.pug'], ['compilePug']).on('change', reload); //watch  sass     
+            gulp.watch(['./dev/app/pug/*.pug', './dev/app/pug/**/*.pug', './dev/app/pug/**/**/*.pug'], ['compilePug']).on('change', reload); //watch  sass     
         } else if (fnc == 'all') {
             gulp.watch(['./dev/app/pug/*.pug', './dev/app/pug/**/*.pug'], ['compilePug']).on('change', reload); //watch  sass
             gulp.watch(['./dev/app/html/*.html', './dev/app/html/**/*.html'], ['fileinclude']).on('change', reload); //watch  sasss
