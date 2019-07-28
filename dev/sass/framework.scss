@@ -26,10 +26,29 @@
 @import "base/font";
 @import "base/common";
 
+//mixin
+
+@mixin theme-default($width, $theme:default) {
+    @if $theme=='full' {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    @else {
+        width: $width;
+        margin: 0 auto;
+    }
+}
+
+
+
+
 //把全域的寫法放在這裡
-@include theme_brand($brand){
+@include theme_brand($brand) {
 
-
+    .section {
+        @include theme-default(1366px, full);
+    }
 
 
 
