@@ -21,7 +21,7 @@
     "bourbon-neat": "^2.1.0",
     "compass-sass-mixins": "^0.12.7",
     "fullpage.js": "^3.0.4",
-    "gsap": "^2.0.2",
+    "gsap": "^3.6.0",
     "hover": "^3.0.0-alpha.6",
     "hover.css": "^2.3.2",
     "jquery": "^3.3.1",
