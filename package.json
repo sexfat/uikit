@@ -20,7 +20,7 @@
     "bootstrap-sass": "^3.3.7",
     "bourbon-neat": "^2.1.0",
     "compass-sass-mixins": "^0.12.7",
-    "fullpage.js": "^3.0.4",
+    "fullpage.js": "^4.0.5",
     "gsap": "^2.0.2",
     "hover": "^3.0.0-alpha.6",
     "hover.css": "^2.3.2",
